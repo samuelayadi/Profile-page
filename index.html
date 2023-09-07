@@ -7,7 +7,7 @@
     <!-- Link to CSS -->
     <link rel="stylesheet" href="style/style.css" />
     <!-- Link to Responsive CSS -->
-    <link rel="stylesheet" href="style/responsive.css">
+    <link rel="stylesheet" href="style/responsive.css" />
     <!-- Link to Google Fonts -->
     <link rel="stylesheet" href="fonts/fonts.css" />
     <!-- Link to Bootstrap Icons-->
@@ -61,8 +61,10 @@
       </div>
     </section>
     <script>
-      function updateUTC() {
+      function updateGMTPlus1() {
         const currentDate = new Date();
+
+        currentDate.setUTCHours(currentDate.getUTCHours() + 1);
 
         const utcHours = currentDate.getUTCHours().toString().padStart(2, "0");
         const utcMinutes = currentDate
@@ -76,7 +78,7 @@
 
         const time = `${utcHours}:${utcMinutes}:${utcSeconds}`;
 
-        const utcDays = currentDate.getUTCDay();
+        const utcDay = currentDate.getUTCDay();
         const daysOfWeek = [
           "Sunday",
           "Monday",
@@ -87,15 +89,16 @@
           "Saturday",
         ];
 
+        const dayOfWeekName = daysOfWeek[utcDay]; 
+
         document.getElementById(
           "timeline"
-        ).innerHTML = `${daysOfWeek[utcDays]} - ${time} `;
+        ).innerHTML = `${dayOfWeekName} - ${time} `;
       }
 
-      updateUTC();
+      updateGMTPlus1();
 
-      setInterval(updateUTC, 1000);
-      
+      setInterval(updateGMTPlus1, 1000);
     </script>
   </body>
 </html>
