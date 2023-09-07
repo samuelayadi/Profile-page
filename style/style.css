@@ -77,8 +77,9 @@ body {
   border-radius: 5px;
   background-color: var(--darkgrey);
   border: 1px solid var(--lightgrey);
-  font-size: 2em;
+  font-size: 1.6em;
   color: white;
+  margin-right: 10px;
 }
 
 .timeline-container {
