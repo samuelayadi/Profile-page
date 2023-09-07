@@ -1,3 +1,17 @@
+@media only screen and (max-width: 300px) {
+  .timeline-container {
+    width: 100%;
+    margin-top: 10px;
+    font-size: 0.7em;
+  }
+
+  .link-timeline-container {
+  flex-direction: column;
+  justify-content: center;
+  
+}
+}
+
 @media only screen and (max-width: 420px) {
   .profile-username {
     font-size: 1.2em;
@@ -15,6 +29,10 @@
 
   .track {
     font-size: 1.2em;
+  }
+
+  .timeline-container {
+    width: 55%;
   }
 }
 
@@ -39,7 +57,7 @@
     height: 20vh;
   }
 
-  .github-link{
+  .github-link {
     padding: 5px 10px;
   }
 }

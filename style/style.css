@@ -19,6 +19,7 @@
 body {
   color: white;
   background: url("../images/bg-main.webp");
+  object-fit: cover;
 }
 
 .profile-card-container {
@@ -86,6 +87,7 @@ body {
   display: flex;
   align-items: center;
   margin-left: 10px;
+  width: 55%;
 }
 
 .timeline-container span {
