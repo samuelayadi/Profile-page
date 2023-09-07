@@ -84,6 +84,7 @@ body {
 .timeline-container {
   display: flex;
   align-items: center;
+  margin-left: 10px;
 }
 
 .timeline-container span {
