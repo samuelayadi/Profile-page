@@ -1,0 +1,115 @@
+* {
+  font-family: "Poppins";
+  padding: 0;
+  margin: 0;
+  box-sizing: border-box;
+}
+
+:root {
+  --primary: #febf3f;
+  --secondary: #76420b;
+  --tetiary: red;
+  --black: #1e2024;
+  --white: #ffffff;
+  --grey: #e5e5e5;
+  --lightgrey: #a9a8a8;
+  --darkgrey: #2d2f30;
+}
+
+body {
+  color: white;
+  background: url("../images/bg-main.webp");
+}
+
+.profile-card-container {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.profile-card {
+  height: 100vh;
+  width: 100%;
+  background-color: var(--black);
+}
+
+.cover-card {
+  background-image: url("../images/coverbg.avif");
+  background-position: center;
+  object-fit: contain;
+  width: 100%;
+  height: 40vh;
+  border-radius: 0px 0px 20px 20px;
+}
+
+.image-card-container {
+  display: flex;
+  justify-content: center;
+  flex-direction: column;
+  align-items: center;
+}
+
+.profile-image {
+  width: 150px;
+  height: 150px;
+  object-fit: cover;
+  border-radius: 50%;
+  border: 3px solid var(--primary);
+  background-color: var(--grey);
+  margin-top: -50px;
+}
+
+.profile-username {
+  font-size: 1.4em;
+  margin-top: 12px;
+}
+
+.link-timeline-container {
+  display: flex;
+  padding: 0px 10%;
+  align-items: center;
+  margin-top: 10px;
+  justify-content: space-around;
+}
+
+.github-link {
+  padding: 5px 10px;
+  border-radius: 5px;
+  background-color: var(--darkgrey);
+  border: 1px solid var(--lightgrey);
+  font-size: 2em;
+  color: white;
+}
+
+.timeline-container {
+  display: flex;
+  align-items: center;
+}
+
+.timeline-container span {
+  font-size: 1.6em;
+}
+
+.timeline {
+  font-size: 1.2em;
+  margin-left: 10px;
+}
+
+.track-container {
+  margin-top: 10px;
+  padding: 0px 10%;
+  justify-content: center;
+  align-items: center;
+}
+
+.track {
+  font-size: 1.4em;
+  text-align: center;
+}
+
+.track span {
+  color: var(--primary);
+  font-size: 1.5em;
+}
+
+

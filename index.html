@@ -1,0 +1,100 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Profile</title>
+    <!-- Link to CSS -->
+    <link rel="stylesheet" href="style/style.css" />
+    <!-- Link to Responsive CSS -->
+    <link rel="stylesheet" href="style/responsive.css">
+    <!-- Link to Google Fonts -->
+    <link rel="stylesheet" href="fonts/fonts.css" />
+    <!-- Link to Bootstrap Icons-->
+    <link
+      rel="stylesheet"
+      href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.10.5/font/bootstrap-icons.css"
+    />
+  </head>
+  <body>
+    <section class="profile-card-container">
+      <div class="profile-card">
+        <div class="cover-card"></div>
+        <div class="image-card-container">
+          <img
+            src="images/my-logo.png"
+            alt="Ayadi Samuel"
+            class="profile-image"
+            data-testid="slackDisplayImage"
+          />
+
+          <p class="profile-username" data-testid="slackUserName">
+            Ayadi Samuel
+          </p>
+        </div>
+
+        <div class="link-timeline-container">
+          <a
+            href="https://github.com/samuelayadi"
+            class="github-link"
+            data-testid="githubURL"
+          >
+            <i class="bi bi-github"></i>
+          </a>
+          <div class="timeline-container">
+            <span>
+              <i class="bi bi-clock"></i>
+            </span>
+            <p
+              class="timeline"
+              id="timeline"
+              data-testid="currentDayOfTheWeek currentUTCTime"
+            ></p>
+          </div>
+        </div>
+
+        <div class="track-container">
+          <p class="track" data-testid="myTrack">
+            <span>F</span>rontend <span>D</span>eveloper
+          </p>
+        </div>
+      </div>
+    </section>
+    <script>
+      function updateUTC() {
+        const currentDate = new Date();
+
+        const utcHours = currentDate.getUTCHours().toString().padStart(2, "0");
+        const utcMinutes = currentDate
+          .getUTCMinutes()
+          .toString()
+          .padStart(2, "0");
+        const utcSeconds = currentDate
+          .getUTCSeconds()
+          .toString()
+          .padStart(2, "0");
+
+        const time = `${utcHours}:${utcMinutes}:${utcSeconds}`;
+
+        const utcDays = currentDate.getUTCDay();
+        const daysOfWeek = [
+          "Sunday",
+          "Monday",
+          "Tuesday",
+          "Wednesday",
+          "Thursday",
+          "Friday",
+          "Saturday",
+        ];
+
+        document.getElementById(
+          "timeline"
+        ).innerHTML = `${daysOfWeek[utcDays]} - ${time} `;
+      }
+
+      updateUTC();
+
+      setInterval(updateUTC, 1000);
+    </script>
+  </body>
+</html>
