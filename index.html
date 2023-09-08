@@ -22,7 +22,7 @@
         <div class="cover-card"></div>
         <div class="image-card-container">
           <img
-            src="images/my-logo.png"
+            src="images/my-pic.jpg"
             alt="Ayadi Samuel"
             class="profile-image"
             data-testid="slackDisplayImage"
@@ -45,11 +45,18 @@
             <span>
               <i class="bi bi-clock"></i>
             </span>
-            <p
+            <div class="date-container">
+              <p
               class="timeline"
               id="timeline"
-              data-testid="currentDayOfTheWeek currentUTCTime"
+              data-testid="currentDayOfTheWeek"
             ></p>
+            <p
+              class="timeline"
+              id="UTC"
+              data-testid="currentUTCTime"
+            >t6yi</p>
+            </div>
           </div>
         </div>
 
@@ -93,8 +100,14 @@
 
         document.getElementById(
           "timeline"
-        ).innerHTML = `${dayOfWeekName} - ${time} `;
+        ).innerHTML = `${dayOfWeekName}`;
+
+        document.getElementById(
+          "UTC"
+        ).innerHTML = `- ${time} `;
       }
+
+      
 
       updateGMTPlus1();
 

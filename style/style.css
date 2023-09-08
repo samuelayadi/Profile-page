@@ -18,7 +18,7 @@
 
 body {
   color: white;
-  background: url("../images/bg-main.webp");
+  background: url("../images/bg-main.jpg");
   object-fit: cover;
 }
 
@@ -35,7 +35,7 @@ body {
 }
 
 .cover-card {
-  background-image: url("../images/coverbg.avif");
+  background-image: url("../images/coverbg.jpg");
   background-position: center;
   object-fit: contain;
   width: 100%;
@@ -97,6 +97,10 @@ body {
 .timeline {
   font-size: 1.2em;
   margin-left: 10px;
+}
+
+.date-container{
+  display :flex ;
 }
 
 .track-container {
