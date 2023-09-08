@@ -31,7 +31,7 @@
           <p class="profile-username" data-testid="slackUserName">
             Slack Name-> Ayadi Samuel
           </p>
-          
+
         </div>
 
         <div class="link-timeline-container">
@@ -83,8 +83,11 @@
           .getUTCSeconds()
           .toString()
           .padStart(2, "0");
+        
+        
+          
 
-        const time = `${utcHours}:${utcMinutes}:${utcSeconds}`;
+        const time = `${utcHours}:${utcMinutes}:${utcSeconds} GMT`;
 
         const utcDay = currentDate.getUTCDay();
         const daysOfWeek = [
