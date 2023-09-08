@@ -5,11 +5,14 @@
     font-size: 0.7em;
   }
 
+  .cover-card {
+    height: 20vh;
+  }
+
   .link-timeline-container {
-  flex-direction: column;
-  justify-content: center;
-  
-}
+    flex-direction: column;
+    justify-content: center;
+  }
 }
 
 @media only screen and (max-width: 420px) {
@@ -17,22 +20,12 @@
     font-size: 1.2em;
   }
 
-  .timeline {
-    font-size: 0.8em;
-    margin-left: 10px;
-  }
-
-  .github-link {
-    padding: 2.5px 5px;
-    font-size: 1.5em;
-  }
-
   .track {
     font-size: 1.2em;
   }
 
   .timeline-container {
-    width: 60%;
+    width: 100%;
   }
 }
 

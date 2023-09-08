@@ -29,8 +29,9 @@
           />
 
           <p class="profile-username" data-testid="slackUserName">
-            Ayadi Samuel
+            Slack Name-> Ayadi Samuel
           </p>
+          
         </div>
 
         <div class="link-timeline-container">
@@ -40,38 +41,38 @@
             data-testid="githubURL"
           >
             <i class="bi bi-github"></i>
+            Link to github 
           </a>
-          <div class="timeline-container">
-            <span>
-              <i class="bi bi-clock"></i>
-            </span>
+        </div>
+
+        <div class="timeline-container">
+            
             <div class="date-container">
               <p
-              class="timeline"
+              class="day"
               id="timeline"
               data-testid="currentDayOfTheWeek"
             ></p>
             <p
-              class="timeline"
+              class="time"
               id="UTC"
               data-testid="currentUTCTime"
             ></p>
             </div>
           </div>
-        </div>
 
         <div class="track-container">
           <p class="track" data-testid="myTrack">
-            <span>F</span>rontend <span>D</span>eveloper
+            Track-> <span>F</span>RONTEND <span>D</span>EVELOPER
           </p>
         </div>
       </div>
     </section>
     <script>
-      function updateGMTPlus1() {
+      function currentUTC() {
         const currentDate = new Date();
 
-        currentDate.setUTCHours(currentDate.getUTCHours() + 1);
+        currentDate.setUTCHours(currentDate.getUTCHours());
 
         const utcHours = currentDate.getUTCHours().toString().padStart(2, "0");
         const utcMinutes = currentDate
@@ -100,18 +101,21 @@
 
         document.getElementById(
           "timeline"
-        ).innerHTML = `${dayOfWeekName},`;
+        ).innerHTML = `Day-> ${dayOfWeekName}`;
 
         document.getElementById(
           "UTC"
-        ).innerHTML = `${time} `;
+        ).innerHTML = `<span>
+              <i class="bi bi-clock"></i>
+              
+            </span>-> ${time} `;
       }
 
       
 
-      updateGMTPlus1();
+      currentUTC();
 
-      setInterval(updateGMTPlus1, 1000);
+      setInterval(currentUTC, 1000);
     </script>
   </body>
 </html>

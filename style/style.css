@@ -16,6 +16,10 @@
   --darkgrey: #2d2f30;
 }
 
+a{
+  text-decoration: none;
+}
+
 body {
   color: white;
   background: url("../images/bg-main.jpg");
@@ -61,46 +65,61 @@ body {
 }
 
 .profile-username {
-  font-size: 1.4em;
+  font-size: 1.2em;
   margin-top: 12px;
 }
 
 .link-timeline-container {
   display: flex;
-  padding: 0px 10%;
+  flex-direction: column;
   align-items: center;
   margin-top: 10px;
   justify-content: space-around;
 }
 
 .github-link {
-  padding: 5px 10px;
+  padding: 5px 20px;
   border-radius: 5px;
   background-color: var(--darkgrey);
   border: 1px solid var(--lightgrey);
-  font-size: 1.6em;
   color: white;
   margin-right: 10px;
 }
 
+.bi-github{
+  font-size:1.2em;
+  margin-right: 10px;
+}
+
+
 .timeline-container {
   display: flex;
+  justify-content: center;
   align-items: center;
-  margin-left: 10px;
-  width: 60%;
+  width: 100%;
 }
 
 .timeline-container span {
   font-size: 1.6em;
 }
 
-.timeline {
+.day {
+  margin-top: 10px;
   font-size: 1.2em;
-  margin-left: 10px;
+}
+
+.time {
+  font-size: 1.2em;
 }
 
 .date-container{
   display :flex ;
+  flex-direction: column;
+}
+
+.bi-clock{
+  align-items: center;
+  font-size: 0.8em;
 }
 
 .track-container {
